@@ -3,7 +3,7 @@ import { getToken } from './auth';
 
 
 const api = axios.create({
-    baseURL: 'https://byqk328hwf.execute-api.us-east-1.amazonaws.com/dev/',
+    baseURL: 'https://ln3qz6b6v1.execute-api.us-east-1.amazonaws.com/dev/',
 })
 
 api.interceptors.request.use(async config => {
