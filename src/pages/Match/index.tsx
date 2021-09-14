@@ -35,14 +35,13 @@ export default class Match extends React.Component{
           const pet_size = data[i].size? data[i].size!! : 'S/I'
           const estimatedAge = data[i].estimatedAge? data[i].estimatedAge!! : 'S/I'
           const pet_description = data[i].description? data[i].description!! : ''
-          cards.push(<div className="col-md-4"><ImgMediaCard image={ pet_image } name={ pet_name } description={ pet_description } height={ pet_size } estimated_age={ estimatedAge }/></div>)
+          cards.push(<div className="col-md-4 mb-5"><ImgMediaCard image={ pet_image } name={ pet_name } description={ pet_description } height={ pet_size } estimated_age={ estimatedAge }/></div>)
         }
         this.setState({ data: cards})
       })
   }
 
   render () {
-
     return (
       <div className="content">
         <Helmet>
@@ -50,13 +49,19 @@ export default class Match extends React.Component{
           <link rel="stylesheet" href="css/home.css" />
         </Helmet>
         <NavBar/>
-        <div className="body">
+        <div className="body mt-5">
           <Row>
-              {
-                this.state.data
-                ? this.state.data
-                : 'carregando'
-              }
+            <div className="col-md-2"></div>
+            <div className="col-md-8">
+              <Row className="mt-2">
+                {
+                  this.state.data
+                  ? this.state.data
+                  : 'carregando'
+                }
+              </Row>
+            </div>
+            <div className="col-md-2"></div>
           </Row>
         </div>
         <Footer/>
