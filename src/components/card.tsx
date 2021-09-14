@@ -28,7 +28,7 @@ export default function ImgMediaCard(
             <CardActionArea>
                 <CardMedia
                     component="img"
-                    height="200"
+                    height="250"
                     image={props.image}
                     title={props.name}
                 />
