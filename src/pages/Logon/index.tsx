@@ -4,21 +4,27 @@ import { Link, useHistory } from 'react-router-dom'
 import { Helmet } from "react-helmet";
 
 import api from '../../service/api';
-import { login } from '../../service/auth';
+import { login, logout } from '../../service/auth';
+import { getToken } from '../../service/auth';
 import { setUserData } from '../../service/user';
 
 export default function Logon() {
+  if (getToken() !== null ) {
+    logout()
+  }
+
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
 
   const history = useHistory();
+
   async function handleLogin(e: { preventDefault: () => void; }) {
     e.preventDefault();
     try {
       const response = await api.post('auth/signin', { "email": email, "password": senha })
-      history.push('home');
       login(response.data.token)
       setUserData(response.data.token, response.data.user)
+      history.push('home');
     } catch (error) {
       alert('Falha no login, tente novamente!');
     }
