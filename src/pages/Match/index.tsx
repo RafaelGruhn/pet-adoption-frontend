@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 import { Helmet } from 'react-helmet';
 import ImgMediaCard from '../../components/card';
 import Footer from '../../components/footer';
@@ -11,7 +11,9 @@ import api from '../../service/api';
 export default function Match() {
   let cards: JSX.Element[] = []
 
-  async function handleGetPets() {
+  async function handleGetPets(e: { preventDefault: () => void; }) {
+    e.preventDefault();
+
     const response = await api.get('pet?accountStatus=active')
     console.log(response)
     const data = response.data
@@ -22,8 +24,8 @@ export default function Match() {
         pet_image = data[i].photos[0].url? data[i].photos[0].url!! : ''
       }
       const pet_name = data[i].name? data[i].name!! : 'Dog'
-      const pet_specie = data[i].specie? data[i].specie!! : 'Vira-Lata'
-      const pet_breed = data[i].breed? data[i].breed!! : 'S/I'
+      // const pet_specie = data[i].specie? data[i].specie!! : 'Vira-Lata'
+      // const pet_breed = data[i].breed? data[i].breed!! : 'S/I'
       const pet_size = data[i].size? data[i].size!! : 'S/I'
       const estimatedAge = data[i].estimatedAge? data[i].estimatedAge!! : 'S/I'
       const pet_description = data[i].description? data[i].description!! : ''
@@ -40,11 +42,11 @@ export default function Match() {
         </Helmet>
         <NavBar/>
         <div className="body">
-          <Row>
+          <Row onLoad={ handleGetPets }>
             <div className="col-md-2"></div>
-            <Col className="col-md-8" onLoad={handleGetPets} >
+            <div className="col-md-8">
               { cards }
-            </Col>
+            </div>
             <div className="col-md-2"></div>
           </Row>
         </div>

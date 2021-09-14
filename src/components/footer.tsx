@@ -6,7 +6,7 @@ export default function Footer() {
             <div className="container-fluid d-flex justify-content-end">
                 <p className="copyright mb-0">
                     &copy; 2021&nbsp;
-                    <a href="#" target="_blank" rel="noopener">IFRS - Campus Ibirubá</a>&nbsp;
+                    <a href="/home" target="_blank" rel="noopener">IFRS - Campus Ibirubá</a>&nbsp;
                     v0.0.0.0.0.0.1
                 </p>
             </div>

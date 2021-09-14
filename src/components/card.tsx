@@ -5,7 +5,6 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
@@ -47,12 +46,12 @@ export default function ImgMediaCard(
             <CardActions>
                 <div className="row">
                     <div className="col-md-6">
-                        <a href="#">
+                        <a href="/home">
                             <img src="img/match/dislike.svg" height="24px" id="icon" alt="Dislike Icon"/>
                         </a>
                     </div>
                     <div className="col-md-6">
-                        <a href="#">
+                        <a href="/home">
                             <img src="img/match/like.svg" height="24px" id="icon" alt="Like Icon"/>
                         </a>
                     </div>
