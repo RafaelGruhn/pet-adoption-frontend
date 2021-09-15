@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
     root: {
-        maxWidth: 200,
+        maxWidth: 300,
     },
 });
 
@@ -29,6 +29,7 @@ export default function ImgMediaCard(
                 <CardMedia
                     component="img"
                     height="250"
+                    width="250"
                     image={props.image}
                     title={props.name}
                 />
@@ -45,14 +46,15 @@ export default function ImgMediaCard(
             </CardActionArea>
             <CardActions>
                 <div className="row">
-                    <div className="col-md-6">
+                    <div className="col-md-3">
                         <a href="/home">
-                            <img src="img/match/dislike.svg" height="24px" id="icon" alt="Dislike Icon"/>
+                            <img src="img/match/dislike.svg" height="30px" id="icon" alt="Dislike Icon"/>
                         </a>
                     </div>
-                    <div className="col-md-6">
+                    <div className="col-md-6"></div>
+                    <div className="col-md-3">
                         <a href="/home">
-                            <img src="img/match/like.svg" height="24px" id="icon" alt="Like Icon"/>
+                            <img src="img/match/like.svg" height="30px" id="icon" alt="Like Icon"/>
                         </a>
                     </div>
                 </div>

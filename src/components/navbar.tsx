@@ -13,7 +13,7 @@ export default function NavBar() {
         user = JSON.parse(json)
     }
     return (
-        <Navbar expand="lg" bg="dark" variant="dark">
+        <Navbar expand="lg" bg="dark" variant="dark" className="fixed-top mb-5">
             <Container>
                 <Navbar.Brand href="/home">Adoção de Pet</Navbar.Brand>
                 <Navbar.Toggle />
