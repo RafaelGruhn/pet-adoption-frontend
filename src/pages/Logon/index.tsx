@@ -46,7 +46,7 @@ export default function Logon() {
           </div>
           <section className="form">
             <form onSubmit={handleLogin}>
-              <input type="text" name="email" placeholder="Usuário" value={email} onChange={(e) => setEmail(e.target.value)} />
+              <input type="text" name="email" placeholder="E-mail" value={email} onChange={(e) => setEmail(e.target.value)} />
               <input type="password" name="password" placeholder="Senha" value={senha} onChange={(e) => setSenha(e.target.value)} />
               <br/><br/>
               <button type="submit" className="btn btn-success mb-2">Logar</button>
