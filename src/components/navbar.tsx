@@ -22,7 +22,10 @@ export default function NavBar() {
                         Bem vindo { user.name }!
                     </Navbar.Text>
                     <Navbar.Text>
-                        <Link to="/" className="underlineHover">Sair.</Link>
+                        <Link to="/registerPet" className="underlineHover mr-4">Cadastrar Pet</Link>
+                    </Navbar.Text>
+                    <Navbar.Text>
+                        <Link to="/" className="underlineHover">Sair</Link>
                     </Navbar.Text>
                 </Navbar.Collapse>
             </Container>

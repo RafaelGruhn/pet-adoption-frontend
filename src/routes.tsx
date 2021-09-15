@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Logon from './pages/Logon';
 import RegistrationForm from './pages/User/register';
 import Match from './pages/Match';
+import Pet from './pages/Pet/register';
 
 
 export default function Routes() {
@@ -17,6 +18,9 @@ export default function Routes() {
             </Switch>
             <Switch>
                 <Route path="/home" exact component={ Match } />
+            </Switch>
+            <Switch>
+                <Route path="/registerPet" exact component={ Pet } />
             </Switch>
         </BrowserRouter>
     );

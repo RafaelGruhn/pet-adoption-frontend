@@ -73,14 +73,14 @@ export default  function RegistrationPetForm() {
                 </div>
                 <div className="row">
                     <div className="col-md-12 text-center text-secondary mb-4 h3">
-                        <b>Cadastre-se</b>
+                        <b>Cadastrar novo pet</b>
                     </div>
                 </div>
                 <div className="row mb-5">
                     <div className="col-md-12 login-card mt-2 hv-center">
                         <form onSubmit={handleRegister}>
                             <div className="form-group text-center">
-                                <label htmlFor="avatar">Avatar</label>
+                                <label htmlFor="avatar">Imagem</label>
                                 <br/>
                                 <input
                                     type="file"
@@ -90,7 +90,7 @@ export default  function RegistrationPetForm() {
                                 />
                             </div>
                             <div className="form-group text-center">
-                                <label htmlFor="name">Nome</label>
+                                <label htmlFor="name">Espécie</label>
                                 <br/>
                                 <input type="text" 
                                         className="form-control" 
@@ -101,40 +101,70 @@ export default  function RegistrationPetForm() {
                                 />
                             </div>
                             <div className="form-group text-center">
-                                <label htmlFor="email">Email</label>
+                                <label htmlFor="name">Raça</label>
                                 <br/>
-                                <input type="email" 
+                                <input type="text" 
                                         className="form-control" 
-                                        id="email"
+                                        id="name"
                                         required
-                                        aria-describedby="emailHelp" 
-                                        value={email}
-                                        onChange={(e) => setEmail(e.target.value)}
-                                />
-                                <small id="emailHelp" className="form-text text-muted">
-                                    Nós não iremos compartilhar seu email com outras pessoas ou serviços.
-                                </small>
-                            </div>
-                            <div className="form-group text-center">
-                                <label htmlFor="password">Senha</label>
-                                <br/>
-                                <input type="password" 
-                                    className="form-control" 
-                                    id="password"
-                                    required
-                                    value={password}
-                                    onChange={(e) => setPassword(e.target.value)}
+                                        value={name}
+                                        onChange={(e) => setName(e.target.value)}
                                 />
                             </div>
                             <div className="form-group text-center">
-                                <label htmlFor="confirmPassword">Confirmar Senha</label>
+                                <label htmlFor="name">Nome/Apelido</label>
                                 <br/>
-                                <input type="password" 
-                                    className="form-control" 
-                                    id="confirmPassword"
-                                    required
-                                    value={confirmePassword}
-                                    onChange={(e) => setConfirmePassword(e.target.value)}
+                                <input type="text" 
+                                        className="form-control" 
+                                        id="name"
+                                        required
+                                        value={name}
+                                        onChange={(e) => setName(e.target.value)}
+                                />
+                            </div>
+                            <div className="form-group text-center">
+                                <label htmlFor="name">Porte</label>
+                                <br/>
+                                <input type="text" 
+                                        className="form-control" 
+                                        id="name"
+                                        required
+                                        value={name}
+                                        onChange={(e) => setName(e.target.value)}
+                                />
+                            </div>
+                            <div className="form-group text-center">
+                                <label htmlFor="name">Idade estimada</label>
+                                <br/>
+                                <input type="text" 
+                                        className="form-control" 
+                                        id="name"
+                                        required
+                                        value={name}
+                                        onChange={(e) => setName(e.target.value)}
+                                />
+                            </div>
+                            <div className="form-group text-center">
+                                <label htmlFor="name">Longevidade estimada</label>
+                                <br/>
+                                <input type="text" 
+                                        className="form-control" 
+                                        id="name"
+                                        required
+                                        value={name}
+                                        onChange={(e) => setName(e.target.value)}
+                                />
+                            </div>
+                            
+                            <div className="form-group text-center">
+                                <label htmlFor="name">Descrição</label>
+                                <br/>
+                                <input type="text" 
+                                        className="form-control" 
+                                        id="name"
+                                        required
+                                        value={name}
+                                        onChange={(e) => setName(e.target.value)}
                                 />
                             </div>
                             <div className="row">
